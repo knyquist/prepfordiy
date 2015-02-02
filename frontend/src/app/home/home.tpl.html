@@ -1,0 +1,115 @@
+<redditdiy-nav-bar curpage="Home"></redditdiy-nav-bar>
+<!-- Full Page Image Header Area -->
+<div id="top" class="header">
+	<div class="vert-text">
+		<div class="row">
+			<div class="col-md-3">
+
+			</div>
+			<div class="col-md-6">
+				<img src="../../assets/img/reddit-logo.png" style="height: 300px;">
+				<h1 style="text-align:center;vertical-align:middle;font-weight:bold;color:black">
+					Plan You/r/ DIY 
+				</h1>
+				<h2 style="color: black"> Prep for your next hobby or home improvement </h2>
+			</div>
+			<div class="col-md-3">
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Full Page Image Header Area -->
+
+<!-- Intro -->
+<div id="about" class="intro">
+</div>
+<!-- /Intro -->
+
+<!-- Services -->
+<div id="services" class="services">
+	<div class="container" id="section-1">
+		<h3 style="text-align:left"> Select a post on the left. </h3>
+		<h4 style="text-align:left"> Find similar posts and subject experts on the right. </h4>
+		<hr>
+		<div class="row">
+			<div class="col-md-6" style="border-right: solid; border-width: 1px; border-color: #dddddd"> <!-- height: 300px; overflow: auto"> -->
+				<h3 style="text-align:left"> /r/DIY posts </h3>
+				<div ng-repeat="post in cur_displayed_threads | orderBy:reverse">
+					<div id="post {{post.index}}" style="padding-left: 5px">	
+						<input type="radio" name="post" ng-init="show_similar_threads(cur_displayed_threads[0].index)" ng-model="rename_me" ng-click="show_similar_threads(post.index); make_selection_blue(post.index, cur_displayed_threads[0].index, cur_displayed_threads[cur_displayed_threads.length-1].index)">
+						<!-- Note: this index is only ok when I start post from zero -->
+						<a style="display:inline" href="{{ post.link }}" target="_blank"> 
+							{{ post.title }}  
+							<a href="{{ post.comment_link }}"style="font-size: 10px; font-color:#888b96" target="_blank"> 
+								{{post.num_comments}} comments 
+							</a> 
+						</a>
+						<p> </p>
+					</div>
+				</div>
+				<nav>
+					<ul class="pager">
+						<li><a ng-show="cur_displayed_threads[0].index" ng-click="grab_prev(cur_displayed_threads[0].index)" href="#">Previous</a></li>
+						<li><a ng-click="grab_next(cur_displayed_threads[cur_displayed_threads.length-1].index)" href="#">Next</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-6">
+				<h3 style="text-align:left"> Similar posts </h3>
+				<div ng-repeat="post in similar_post_threads | orderBy:reverse">
+					<!-- Note: this index is only ok when I start post from zero -->
+					<div style="text-align:justify">
+						<p style="display:inline"> {{$index}} </p>
+						<a style="display:inline" href="{{ post.link }}" target="_blank">
+							{{ post.title }}
+							<a href="{{ post.comments }}"style="font-size: 10px; font-color:#888b96" target="_blank"> 
+								comments 
+							</a> 
+					 	</a>
+						<p> </p>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div class="col-md-6">
+				<h3 style="text-align:left; display:inline"> The advice line </h3> <p></p>
+				<div ng-repeat="post in similar_post_threads | orderBy:reverse">
+					<!-- Note: this index is only ok when I start post from zero -->
+					<div style="text-align:justify">
+						<a style="display:inline" href="http://www.reddit.com/u/{{post.author}}" target="_blank"> {{ post.author }} </a>
+						<p> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer-home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center">
+				<ul class="list-inline">
+					<li>
+						<i class="fa fa-facebook fa-3x"></i>
+					</li>
+					<li>
+						<i class="fa fa-twitter fa-3x"></i>
+					</li>
+					<li>
+						<i class="fa fa-reddit fa-3x"></i>
+					</li>
+				</ul>
+				<div class="top-scroll">
+					<a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
+				</div>
+				<hr>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /Footer -->
+
+<!-- /Footer -->
+

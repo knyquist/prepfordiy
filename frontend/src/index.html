@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="redditDIY" ng-controller="AppCtrl">
+  <head>
+    <base href="/">
+    <title ng-bind="reddit"></title>
+    
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <link rel="icon" href="/favicon.ico" />
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@midnighteuler">
+    <meta name="twitter:title" content="redditDIY">
+    <meta name="twitter:description" content="redditDIY: Make friends and things.">
+    <meta name="twitter:creator" content="@midnighteuler">
+    <meta name="twitter:image:src" content="https://avatars1.githubusercontent.com/u/5408903?s=460">
+    <meta property="og:title" content="redditDIY" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://befriend.ly" />
+    <meta property="og:image" content="https://avatars1.githubusercontent.com/u/5408903?s=460" />
+    <meta property="og:description" content="redditDIY: Make friends and things.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Redactor -->
+    <link rel="stylesheet" href="assets/css/redactor/redactor.css" />
+    <link rel="stylesheet" href="assets/css/jcrop/jquery.Jcrop.min.css" />
+    <link rel="stylesheet" href="assets/css/file-upload/jquery.fileupload.css">
+    <link rel="stylesheet" href="assets/css/file-upload/jquery.fileupload-ui.css">
+    
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+  </head>
+  <body>
+    <span ui-view="main"></span>
+  </body>
+</html>

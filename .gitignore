@@ -1,0 +1,13 @@
+*.sw*
+*~
+frontend/build/
+frontend/bin/
+frontend/node_modules/
+.metadata
+.project
+.idea
+backend/.pyenv
+backend/__pycache__
+backend/features/tmp
+*__pycache__*
+*.pyc
