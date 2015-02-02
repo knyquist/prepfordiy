@@ -1,4 +1,4 @@
-# Befriend.ly
+# Prep for/r/ DIY
 
 An awesome service for people to make friends and things.
 
