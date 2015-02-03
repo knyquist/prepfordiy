@@ -57,7 +57,7 @@
 			</div>
 			<div class="col-md-6">
 				<h3 style="text-align:left"> Similar posts </h3>
-				<div ng-repeat="post in similar_post_threads | orderBy:reverse">
+				<div ng-repeat="post in similar_post_threads | orderBy:reverse" ng-show="!$first">
 					<!-- Note: this index is only ok when I start post from zero -->
 					<div style="text-align:justify">
 						<p style="display:inline"> {{$index}} </p>
@@ -85,31 +85,4 @@
 		</div>
 	</div>
 </div>
-
-<footer class="footer-home">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center">
-				<ul class="list-inline">
-					<li>
-						<i class="fa fa-facebook fa-3x"></i>
-					</li>
-					<li>
-						<i class="fa fa-twitter fa-3x"></i>
-					</li>
-					<li>
-						<i class="fa fa-reddit fa-3x"></i>
-					</li>
-				</ul>
-				<div class="top-scroll">
-					<a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
-				</div>
-				<hr>
-			</div>
-		</div>
-	</div>
-</footer>
-<!-- /Footer -->
-
-<!-- /Footer -->
 

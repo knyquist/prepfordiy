@@ -11,7 +11,7 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from gensim import corpora, models, similarities
+#from gensim import corpora, models, similarities
 import string
 import os
 from scipy.sparse.csr import csr_matrix
@@ -85,7 +85,7 @@ def find_similar_posts(post_id):
 	    scores.append( [index, item] )
 	    index+=1
 
-	posts = sorted(scores, key=lambda x: x[1], reverse=True)[1:6]
+	posts = sorted(scores, key=lambda x: x[1], reverse=True)[0:6]
 
 	top_posts = []
 	for post in posts:
