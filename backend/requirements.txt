@@ -43,7 +43,7 @@ cython==0.20.2
 git+git://github.com/midnighteuler/gevent.git
 git+git://github.com/midnighteuler/gevent-websocket.git
 flask-sockets==0.1
-lxml==3.4.0
+lxml==4.6.3
 
 pandas==0.13.1
 nltk==3.0.1
