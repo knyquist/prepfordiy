@@ -31,7 +31,7 @@ pyparsing==2.0.2
 python-dateutil==2.2
 python-mimeparse==0.1.4
 pytz==2014.2
-requests==2.2.1
+requests==2.20.0
 selenium==2.42.1
 six==1.6.1
 sqlalchemy-migrate==0.9.1
